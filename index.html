@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type = "text/javascript" src="tst.js"></script>
+</head>
+<body onload="generateQuestion();">
+    <div class="container">
+        <div id="home" class="flex-column flex-center">
+
+            <p class="question notCopyableText" id="question"></p>
+            <div class="row">
+                <div class="column">
+                    <a class="btn" href="javascript:checkAnswer('anws1');" id="anws1"></a>
+                    <a class="btn" href="javascript:checkAnswer('anws2');" id="anws2"></a>
+                    <a class="btn" href="javascript:checkAnswer('anws3');" id="anws3"></a><br>
+                    <a class="btn" href="javascript:checkAnswer('anws4');" id="anws4"></a><br>
+                </div>
+                <div class="column">
+                    <a class="btn" href="javascript:checkAnswer('anws5');" id="anws5"></a>
+                    <a class="btn" href="javascript:checkAnswer('anws6');" id="anws6"></a>
+                    <a class="btn" href="javascript:checkAnswer('anws7');" id="anws7"></a><br>
+                    <a class="btn" href="javascript:checkAnswer('anws8');" id="anws8"></a><br>
+                </div>
+            </div>
+            
+            <p class="answers" id="correct"></p>
+            <p class="answers" id="incorrect"></p>
+            <p class="answers" id="incorrectHint"></p>
+
+            <h1>Settings</h1>
+
+            <div>
+                <span class="radiocontainer">
+                    <input type="radio" onclick="changeKanatype(1);" id="hiragana" 
+                     name="kanatype" value="hiragana" checked>
+                    <label for="hiragna">Hiragana</label>
+                    <input type="radio" onclick="changeKanatype(2);" id="katakana"
+                     name="kanatype" value="katakana">
+                    <label for="hiragna">Katakana</label>
+                </span>
+            </div>
+            <div>
+                <span class="radiocontainer">
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="a" name="a" value="a" checked>
+                    <label for="a" id="al">あいうえお</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="ka" name="ka" checked>
+                    <label for="ka" id="kal">かきくけこ</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="sa" name="sa" checked>
+                    <label for="sa", id="sal">さしすせそ</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="ta" name="ta" checked>
+                    <label for="ta", id="tal">たちつてと</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="na" name="na" checked>
+                    <label for="na", id="nal">なにぬねの</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="ha" name="ha" checked>
+                    <label for="ha", id="hal">はひふへほ</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="ma" name="ma" checked>
+                    <label for="ma", id="mal">まみむめも</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="ya" name="ya" checked>
+                    <label for="ya", id="yal">やゆよ</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="ra" name="ra" checked>
+                    <label for="ra", id="ral">らりるれろ</label>
+
+                    <input type="checkbox" onclick="return changeKanacolumns(this);" id="wa" name="wa" checked>
+                    <label for="wa", id="wal">わをん</label>
+                    
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
